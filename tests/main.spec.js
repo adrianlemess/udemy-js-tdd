@@ -1,34 +1,7 @@
-/* global context, it, describe */
+/* global before, after, context, it, describe, beforeEach, afterEach */
+const { expect } = require('chai');
 
 describe('Main', () => {
-  describe.only('Method A', () => {
-    context('Case A', () => {
-      it('should happen blablabla', () => {
-        // espera o que aconteça
-        // Entrada de dados / método sum(2,3)
-        // Espera retornar (5) => true | (6) => false => broken test
-        throw new Error('Erro');
-      });
-    });
 
-    context('Case B', () => {
-      it('should happen blablabla', () => {
-        // espera o que aconteça
-        // Entrada de dados / método sum(2,3)
-        // Espera retornar (5) => true | (6) => false => broken test
 
-      });
-
-      it('should happen fon', () => {
-        // espera o que aconteça
-        // Entrada de dados / método sum(2,3)
-        // Espera retornar (5) => true | (6) => false => broken test
-
-      });
-    });
-  });
-
-  describe('Method B', () => {
-
-  });
 });
