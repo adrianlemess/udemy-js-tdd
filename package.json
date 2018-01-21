@@ -8,14 +8,17 @@
     "test:tdd": "npm run test -- --watch",
     "test:coverage": "nyc npm test",
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "prepush": "npm run lint && npm run test",
+    "prepush": "npm run lint && npm run test:coverage",
     "build": "./node_modules/.bin/webpack --colors --progress --config webpack.config.js",
     "watch": "npm run build -- --watch",
     "serve": "./node_modules/.bin/webpack-dev-server --inline --open"
   },
   "nyc": {
     "reporter": ["text", "html"],
-    "exclude": ["tests/**"]
+    "exclude": ["tests/**"],
+    "check-coverage": true,
+    "functions": 80,
+    "lines": 80
   },
   "repository": {
     "type": "git",
